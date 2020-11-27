@@ -1,0 +1,171 @@
+@import url("https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;600;700&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: "Libre Franklin", sans-serif;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+}
+
+// Container
+.container {
+  width: 560px;
+  padding: 2em;
+}
+
+// Logo
+.logo {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2em;
+}
+
+// Header
+header {
+  text-align: center;
+  margin-bottom: 2.5em;
+  h1 {
+    margin-bottom: 0.4em;
+    color: hsl(0, 0%, 59%);
+    font-size: 2em;
+    font-weight: 300;
+    strong {
+      color: #000;
+    }
+  }
+  p {
+    font-size: 1.1em;
+  }
+}
+
+// Form
+form {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 3em;
+  .form-control {
+    flex: 2;
+    padding-right: 20px;
+    position: relative;
+    input {
+      width: 100%;
+      padding: 1em 1.5em;
+      border-radius: 50px;
+      border: 1px solid hsl(223, 100%, 88%);
+      opacity: 0.6;
+      outline: none;
+      font-size: 1em;
+    }
+    input::placeholder {
+      color: hsl(223, 100%, 88%);
+    }
+  }
+  .btn {
+    flex: 1;
+  }
+}
+
+.form-control.error {
+  input {
+    border-color: hsl(354, 100%, 66%);
+  }
+  small {
+    display: block;
+  }
+}
+small {
+  display: none;
+  position: absolute;
+  bottom: -25px;
+  left: 25px;
+  color: hsl(354, 100%, 66%);
+  font-style: italic;
+}
+
+// Hero
+.hero {
+  img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+// Footer
+footer {
+  margin-top: 2em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  .social {
+    display: flex;
+    justify-content: center;
+  }
+  p {
+    margin-top: 10px;
+    font-size: 0.7em;
+    color: hsl(0, 0%, 59%);
+  }
+}
+
+// Utilities
+.btn {
+  cursor: pointer;
+  padding: 1em 1.5em;
+
+  border-radius: 50px;
+  border: transparent;
+  background: hsl(223, 87%, 63%);
+  color: #fff;
+  font-weight: 300;
+  font-size: 1em;
+  letter-spacing: 1px;
+  box-shadow: 3px 10px 10px hsla(223, 87%, 63%, 0.255);
+  outline: none;
+  transition: transform 0.3s;
+}
+
+.btn:hover {
+  background: hsl(223, 87%, 70%);
+}
+.btn:active {
+  transform: scale(0.9);
+}
+
+i {
+  cursor: pointer;
+  margin: 0 10px;
+  padding: 9px 12px;
+  color: hsl(223, 87%, 63%);
+  border: 1px solid hsl(223, 100%, 88%);
+  border-radius: 50%;
+}
+
+i:hover {
+  color: #fff;
+  background: hsl(223, 87%, 63%);
+}
+
+@media screen and(max-width: 550px) {
+  form {
+    flex-direction: column;
+    .form-control {
+      flex: 1;
+      padding-right: 0;
+      margin-bottom: 40px;
+    }
+    .btn {
+      flex: 1;
+    }
+  }
+  small {
+    left: 0;
+    width: 100%;
+    text-align: center;
+  }
+}
